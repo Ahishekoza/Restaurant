@@ -1,3 +1,7 @@
+I have used live server in my project which is json server , If you want to store data in server just use json-server --watch name.json .This will create a database name 'name' on localhost://3000. Delete the db.json present in the project as that server was used by me .
+
+Feel free to contact me  if you have any doubt :abhishekoza11@gmail.com
+
 # Website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.

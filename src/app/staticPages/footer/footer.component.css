@@ -1,0 +1,30 @@
+.footer{
+    background-color: black;
+    padding: 20px 10px;
+    position: sticky;
+    top: 100%;
+    overflow: hidden;
+}
+p{
+    color: white;
+    font-size: 12px;
+}
+h1{
+    color: white;
+    font-size: 20px;
+}
+a{
+  
+    text-decoration: none;
+    color: white;
+    padding: 0 5px;
+    font-size: 18px;
+}
+a:hover{
+    color: var(--primary-color);
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

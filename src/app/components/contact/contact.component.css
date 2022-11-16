@@ -1,0 +1,9 @@
+.underline{
+    text-decoration: none;
+    text-underline-offset: 0.5rem;
+    transition: text-decoration 1000ms;
+    color: cadetblue;
+}
+.underline:hover{
+    text-decoration: underline;
+}

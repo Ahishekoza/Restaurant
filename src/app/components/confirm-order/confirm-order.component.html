@@ -1,0 +1,150 @@
+<button mat-raised-button class="block1" routerLink="/menu">Back</button>
+
+  <div class="container align-items-center mt-3">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="card">
+          <h3 class="px-3 py-2" style="font-weight: 600;">Details</h3>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">UserName</label>
+                <input type="text" 
+                required
+                name="Customername"
+                class="form-control"
+                [(ngModel)]="personalInfo.Customername" 
+                placeholder="Enter Your Full Name"
+                id="exampleInputEmail1" 
+                aria-describedby="emailHelp"> 
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+               </div>
+
+
+               <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label mr-3">Phone No.</label>
+                <input 
+                required
+                type="text" 
+                name="phoneNo" 
+                class="form-control"
+                [(ngModel)]="personalInfo.phoneNo"
+                placeholder="Enter Your Mobile Number">
+               </div>
+
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Address</label>
+                <textarea rows="3" 
+                required
+                type="text"
+                name="address"
+                [(ngModel)]="personalInfo.address"
+                placeholder="Enter Your Address"
+                class="form-control"
+                id="exampleInputPassword1"></textarea>
+              </div>
+
+              <label id="example-radio-group-label">Mode Of Payment --></label>
+              <mat-radio-group
+              style="margin:0 10px;"
+                aria-labelledby="example-radio-group-label"
+                class="example-radio-group"
+                [(ngModel)]="personalInfo.modeOfPayement"
+                name="modeOfPayement">
+                <mat-radio-button class="example-radio-button" 
+                style="margin:10px 0 ;"
+                *ngFor="let o of options" [value]="o">
+                  {{o}}
+                </mat-radio-button>
+              </mat-radio-group>
+              
+                <div class="form-check mb-2">
+                  <input class="form-check-input" [(ngModel)]="TAndC" name="TAndC" type="checkbox"  id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Click to allow all the terms and condition
+                  </label>
+                </div>
+              <button type="button"  (click)="Submit()" type="submit" class="btn btn-primary" >Submit</button>
+             
+          </form>
+          </div>
+        </div>
+   
+      </div>
+
+
+      <div class="col-md-5">
+        <div class="card-table">
+          <div class="cart-product">
+              <table class="table table-responsive">
+                  <thead>
+                      <tr>
+                          <th>Sr.No</th>
+                          <th>Food Name</th>
+                          <th>Food Image</th>
+                          <th>Price</th> 
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of foodSelected; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.foodName}}</td>
+                        <td><img style="width: 30%;" src="{{item.foodImg}}" alt=""></td>
+                        <th style="width: 12%;">{{item.foodPrice|currency:'INR'}}</th>
+                     
+                      
+                    </tr>
+                    <tr>
+                      <td colspan="3"></td>
+                      <th >Total Bill: {{totalBill|currency:'INR'}}</th>
+                    </tr>
+              </table>
+       
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- <button mat-raised-button class="block1" (click)="deleteUser()" >Back</button>
+<div class="cover"> -->
+    <!-- <img src="../../../assets/images.jpg"  alt=""> -->
+    <!-- <div class="container mx-auto d-flex" style="width: 50%;">
+
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">UserName</label>
+              <input type="text" value="{{CustomerInfo.Customername}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            <!-- </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Address</label>
+              <textarea rows="3" value="{{CustomerInfo.address}}" class="form-control" id="exampleInputPassword1"></textarea>
+            </div>
+            <select  #team (change)="SelectedValue(team.value)"  class="form-select mb-3" aria-label="Default select example" >
+                <option  selected>Modes Of Payment</option>
+                <option value="1">Cash On Delivery</option>
+                <option value="2">UPI</option>
+                <option value="3">Net Banking</option>
+              </select>
+              <div class="form-check mb-2">
+                <input class="form-check-input" ng-checked="checkBoxSelected"  type="checkbox"  id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Click to allow all the terms and condition
+                </label>
+              </div>
+            <button type="submit" class="btn btn-primary" (click)="Submit()">Submit</button>
+        </form>
+
+   
+
+    
+    </div>
+</div> -->
+
+
+
+
+
+

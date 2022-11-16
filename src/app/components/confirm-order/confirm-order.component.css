@@ -1,0 +1,11 @@
+.block1{
+    background-color: black;
+    color: white;
+}
+.box{
+    margin: 1rem 3rem;
+
+}
+.box span{
+    margin-left: 5rem;
+}

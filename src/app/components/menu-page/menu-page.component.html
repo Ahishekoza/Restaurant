@@ -1,0 +1,34 @@
+<button mat-raised-button class="block1" routerLink="/menu">Back</button>
+<div class="container">
+    
+    <div class="row">
+        <div class="col-lg-6">
+           <img src="{{menuData.foodImg}}" alt="">
+           <h1>{{menuData.foodName}}</h1>
+           <p>{{menuData.foodDetails}}</p>
+           <p>{{menuData.foodPrice|currency:'INR'}}</p>
+        </div>
+        <div class="col-lg-6 mt-5 flex">
+            <h1 style="font-style: italic;">Enter the Details</h1>
+            <input 
+            type="text" name="Customername"
+             [(ngModel)]="personalInfo.Customername" 
+            placeholder="Enter Your Full Name">
+
+            <input 
+            type="text" 
+            name="phoneNo" 
+            [(ngModel)]="personalInfo.phoneNo"
+            placeholder="Enter Your Mobile Number">
+
+            <textarea
+            type="text"
+            name="address"
+            [(ngModel)]="personalInfo.address"
+            placeholder="Enter Your Address"></textarea>
+
+            <button mat-raised-button class="block" (click)="addDetail()" [routerLink]="'/confirmOrder/'+personalInfo.Customername">Place Order</button>
+        </div>
+    </div>
+  
+</div>
